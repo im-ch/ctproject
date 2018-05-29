@@ -33,7 +33,18 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "home";
+		return "index";
 	}
 	
+	@RequestMapping(value = "/generic", method = RequestMethod.GET)
+	public String generic(Locale locale, Model model) {
+				
+		return "generic";
+	}
+	
+	@RequestMapping(value = "/elements", method = RequestMethod.GET)
+	public String elements(Locale locale, Model model) {
+				
+		return "elements";
+	}
 }
